@@ -1,7 +1,6 @@
-# Ng-Bootstrap Bazel
+# NgBootstrapBazelIvy
 
-1. Init new project
+## 1. Init new project with Bazel and Ivy
 ```bash
-ng new ng-bootstrap-bazel
-# select routing and scss for styles
+ng new ng-bootstrap-bazel-ivy --collection=@angular/bazel --enable-ivy
 ```

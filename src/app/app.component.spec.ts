@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ng-bootstrap-bazel'`, () => {
+  it(`should have as title 'ng-bootstrap-bazel-ivy'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ng-bootstrap-bazel');
+    expect(app.title).toEqual('ng-bootstrap-bazel-ivy');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ng-bootstrap-bazel!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ng-bootstrap-bazel-ivy!');
   });
 });
