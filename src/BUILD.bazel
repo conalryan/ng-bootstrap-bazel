@@ -53,6 +53,7 @@ rollup_bundle(
         "//src",
         "@npm//@angular/router",
         "@npm//rxjs",
+        "@npm//@ng-bootstrap/ng-bootstrap",
     ],
 )
 
