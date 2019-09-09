@@ -161,3 +161,35 @@ INFO: 0 processes.
 FAILED: Build did NOT complete successfully
 The terminal process terminated with exit code: 1
 ```
+
+Add `"@npm//@ng-bootstrap/ng-bootstrap",` to //src:bundle deps
+```bazel
+"@npm//@ng-bootstrap/ng-bootstrap",
+```
+```bash
+bazel build //src:bundle
+# SUCCESS
+```
+
+```bash
+bazel build //src:prodapp
+# SUCCESS
+```
+
+```bash
+bazel run //src:deverserver
+```
+
+Browser ERROR:
+```
+Failed to load resource: the server responded with a status of 404 (Not Found)
+zone.min.js?v=1567992324291:1 Uncaught Error: Script error for "@ng-bootstrap/ng-bootstrap", needed by: @ng-bootstrap/ng-bootstrap/ng-bootstrap.ngfactory, project/src/app/app.component.ngfactory, project/src/app/app.module.ngfactory, project/src/app/app.module
+http://requirejs.org/docs/errors.html#scripterror
+    at makeError (bundle.min.js?v=1567992324291:169)
+    at HTMLScriptElement.onScriptError (bundle.min.js?v=1567992324291:1739)
+    at e.invokeTask (zone.min.js?v=1567992324291:1)
+    at t.runTask (zone.min.js?v=1567992324291:1)
+    at t.invokeTask [as invoke] (zone.min.js?v=1567992324291:1)
+    at _ (zone.min.js?v=1567992324291:1)
+    at HTMLScriptElement.m (zone.min.js?v=1567992324291:1)
+```
